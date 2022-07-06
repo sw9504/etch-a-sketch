@@ -1,0 +1,31 @@
+body {
+    background-color: lightslategray;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    margin: 0 auto;
+    padding: 10%;
+}
+
+h1 {
+    width: calc(22px * 16);
+    position: sticky;
+}
+
+#div-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: calc(22px * 16);
+}
+
+.square {
+    padding: 0px;
+    border: 1px solid black;
+    width: 20px;
+    height: 20px;
+}
+
+.square:hover {
+    background-color: hotpink;
+}
