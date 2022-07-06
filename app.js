@@ -1,4 +1,4 @@
-const gridSize = 16;
+const gridSize = 50;
 
 function createGrid () {
     const divContainer = document.getElementById('div-container');
@@ -10,4 +10,19 @@ function createGrid () {
     }
 }
 
+function getRandomInt (){
+    return Math.floor(Math.random() * 255);
+}
+
 createGrid();
+
+const container = Array.from(document.querySelectorAll('.square'));
+
+container.forEach(square => {
+    square.addEventListener("mouseenter", event => {
+        let rgbColor = `rgb(${getRandomInt()}, ${getRandomInt()}, ${getRandomInt()})`
+        event.target.style.backgroundColor = rgbColor;
+    });
+});
+
+
