@@ -1,4 +1,4 @@
-const gridSize = 50;
+let gridSize = 16;
 
 function createGrid () {
     const divContainer = document.getElementById('div-container');
@@ -14,6 +14,10 @@ function getRandomInt (){
     return Math.floor(Math.random() * 255);
 }
 
+function clearGrid (){
+    const container = document.getElementById('div-container');
+}
+
 createGrid();
 
 const container = Array.from(document.querySelectorAll('.square'));
@@ -25,4 +29,10 @@ container.forEach(square => {
     });
 });
 
+const btn = document.getElementById("grid-btn");
+btn.addEventListener("click",event => {
+    const input = document.querySelector('input').value;
+    gridSize = input;
+    console.log(gridSize);
+});
 
