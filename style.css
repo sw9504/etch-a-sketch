@@ -54,8 +54,8 @@ button:hover {
     margin: 0;
     padding: 0;
     border: 1px solid black;
-    width: 30px;
-    height: 30px;
+    width: 10px;
+    height: 10px;
 }
 
 .square:hover {
