@@ -1,5 +1,14 @@
+/**
+ * 
+ * Global vairables
+ *  
+ */
+
 let gridSize = 16;
 
+/**
+ * Creates grid with gridsize.
+ */
 function createGrid () {
     const divContainer = document.getElementById('div-container');
     
@@ -10,9 +19,18 @@ function createGrid () {
     }
 }
 
+/**
+ * Generates random integer for rgb colour.
+ * @returns int 
+ */
+
 function getRandomInt (){
     return Math.floor(Math.random() * 255);
 }
+
+/**
+ * Event listener for squares. On mouse envent, a square is painted.
+ */
 
 function eventSquare () {
     const container = Array.from(document.querySelectorAll('.square'));
@@ -25,24 +43,35 @@ function eventSquare () {
     });
 }
 
+/**
+ * Event listener for grid btn.
+ */
 function eventBtn (){
     const btn = document.getElementById("grid-btn");
+    
     btn.addEventListener("click",event => {
-    const input = document.querySelector('input').value;
-    gridSize = input;
-    clearGrid();
+        const input = document.querySelector('input').value;
+        gridSize = input;
+        clearGrid();
     });
 }
+
+/**
+ * Update the grid size.
+ */
 
 function clearGrid (){
     const container = document.getElementById('div-container');
 
     while (container.lastElementChild) 
         container.removeChild(container.lastElementChild);
-
     createGrid();
     eventSquare();
 }
+
+/**
+ * Main work flow.
+ */
 
 createGrid();
 eventSquare();
